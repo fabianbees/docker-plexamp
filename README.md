@@ -1,7 +1,12 @@
 # Docker Container for Plexamp
 
+<p align="center">
+  <a href="https://www.plex.tv/plexamp">
+    <img src="https://www.plex.tv/wp-content/uploads/2022/09/plexamp-app-icon.png" alt="https://www.plex.tv/plexamp" width="150px" />
+  </a>
+</p>
 
-Docker container for Plexamp headless, see also: https://www.plex.tv/plexamp/#downloads and 
+Docker container for Plexamp headless, see also: https://www.plex.tv/plexamp/#downloads and https://forums.plex.tv/t/plexamp-on-the-raspberry-pi/791500
 
 
 ## Tags
@@ -22,7 +27,7 @@ The container can be run via plain docker:
 docker run -d \
     --name plexamp \
     -e PLEXAMP_CLAIM_TOKEN='your plex clain here' `# see: https://www.plex.tv/claim` \
-    -e PLEXAMP_PLAYER_NAME='plexamp-docker'
+    -e PLEXAMP_PLAYER_NAME='plexamp-docker' \
     -p 32500:32500 \
     -p 20000:20000 \
     --device "/dev/snd:/dev/snd" \
