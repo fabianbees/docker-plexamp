@@ -34,6 +34,8 @@ docker run -d \
     fabianbees/plexamp:latest
 ```
 
+> **_NOTE:_**  The Plexamp WebUI can be reached on Container Port 32500 (navigate to http://localhost:32500).
+
 
 ## Deploy via docker-compose
 
