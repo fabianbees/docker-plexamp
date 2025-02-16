@@ -1,0 +1,13 @@
+services:
+  plexamp:
+    image: fabianbees/plexamp:latest
+    container_name: plexamp-headless
+    environment:
+      PLEXAMP_CLAIM_TOKEN: "your plex clain here"  # see: https://www.plex.tv/claim
+      PLEXAMP_PLAYER_NAME: "plexamp-docker"
+    ports:
+      - 32500:32500
+      - 20000:20000
+    devices:
+      - "/dev/snd:/dev/snd"
+    restart: unless-stopped

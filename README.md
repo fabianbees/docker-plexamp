@@ -51,14 +51,13 @@ docker compose up
 
 
 ```yaml
-version: "3.8"
 services:
   plexamp:
     image: fabianbees/plexamp:latest
-    container_name: docker-plexamp
+    container_name: plexamp-headless
     environment:
-      - PLEXAMP_CLAIM_TOKEN: "your plex clain here"  # see: https://www.plex.tv/claim
-      - PLEXAMP_PLAYER_NAME: "plexamp-docker"
+      PLEXAMP_CLAIM_TOKEN: "your plex clain here"  # see: https://www.plex.tv/claim
+      PLEXAMP_PLAYER_NAME: "plexamp-docker"
     ports:
       - 32500:32500
       - 20000:20000
